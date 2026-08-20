@@ -1,0 +1,76 @@
+HOW WILL PLAN LOOK LIKE
+plan empty:
+[
+    {
+        bunch primitives like this, what needs to be done on them
+    },
+]
+
+=> plan there : executor => if create_primitive_node: create_primitive_node
+                            if local_mcp_agents : local_mcp_agents
+                            if blender tool mcp call ?: call blender tool node
+
+
+=> all planner at different level => what needs to be done
+=> one plan
+=> then execution
+    => 
+=> check each step output with plan
+=> redo if not ok
+=> ok pass
+
+{'mcp_tool_executor_node': 'mcp_tool_executor_node',
+ 'modify_geometry': 'modify_geometry', 'create_primitive': 'create_primitive', 
+ 'assign_material': 'assign_material', 'parent_object': 'parent_object', 
+ 'delete_object': 'delete_object', 'inspect_scene': 'inspect_scene', 
+ 'transform_object': 'transform_object', '__end__': '__end__'}
+
+
+
+steps=[PlanStep(args={'primitive_type': 'cube', 
+'name': 'Chair_Seat', 'location': [0, 0, 0.5], 'scale': [0.6, 0.6, 0.1]},
+depends_on=[], agent_id='CREATE PRIMITIVE', mcp_tool_id='create_primitive',
+ to_be_completed_in_this='Create a chair base (seat part) using a cube primitive',
+  completed_in_this_step=None), 
+  PlanStep(args={'primitive_type': 'cube', 'name': 'Chair_Backrest', 
+  'location': [0, -0.35, 1.2], 'scale': [0.6, 0.1, 0.8]}, depends_on=[], 
+  agent_id='CREATE PRIMITIVE', mcp_tool_id='create_primitive', 
+  to_be_completed_in_this='Create chair backrest using a cube primitive', 
+  completed_in_this_step=None), PlanStep(args={'primitive_type': 'cube', 'name':
+   'Chair_Leg_FL', 'location': [-0.25, 0.25, 0.25], 'scale': [0.08, 0.08, 0.25]}, 
+   depends_on=[], agent_id='CREATE PRIMITIVE', mcp_tool_id='create_primitive', to_be_completed_in_this='Create front-left chair leg using a cube primitive', completed_in_this_step=None), PlanStep(args={'primitive_type':
+    'cube', 'name': 'Chair_Leg_FR', 'location': [0.25, 0.25, 0.25], 'scale': [0.08, 0.08, 0.25]}, depends_on=[], agent_id='CREATE PRIMITIVE', mcp_tool_id='create_primitive', to_be_completed_in_this='Create front-right chair leg using a cube primitive', completed_in_this_step=None),
+     PlanStep(args={'primitive_type': 'cube', 'name': 'Chair_Leg_BL', 'location': [-0.25, -0.25, 0.25], 'scale': [0.08, 0.08, 0.25]}, depends_on=[], agent_id='CREATE PRIMITIVE', mcp_tool_id='create_primitive', to_be_completed_in_this='Create back-left chair leg using a cube primitive', completed_in_this_step=None), PlanStep(args={'primitive_type': 'cube', 'name': 'Chair_Leg_BR', 'location': [0.25, -0.25, 0.25], 'scale': [0.08, 0.08, 0.25]}, depends_on=[], agent_id='CREATE PRIMITIVE', mcp_tool_id='create_primitive', to_be_completed_in_this='Create back-right chair leg using a cube primitive', completed_in_this_step=None), PlanStep(args={'primitive_type': 'sphere', 'name': 'Boy_Head', 'location': [0, 0, 1.8], 'scale': [0.2, 0.2, 0.22]}, depends_on=[], agent_id='CREATE PRIMITIVE', mcp_tool_id='create_primitive', to_be_completed_in_this="Create boy's head using a sphere primitive", completed_in_this_step=None), PlanStep(args={'primitive_type': 'cube', 'name': 'Boy_Torso', 'location': [0, 0, 1.3], 'scale': [0.25, 0.2, 0.35]}, depends_on=[], agent_id='CREATE PRIMITIVE', mcp_tool_id='create_primitive', to_be_completed_in_this="Create boy's torso using a cube primitive", completed_in_this_step=None), PlanStep(args={'primitive_type': 'cube', 'name': 'Boy_Arm_L_Upper', 'location': [-0.35, 0, 1.35], 'scale': [0.08, 0.08, 0.25]}, depends_on=[], agent_id='CREATE PRIMITIVE', mcp_tool_id='create_primitive', to_be_completed_in_this="Create boy's left upper arm using a cube primitive", completed_in_this_step=None), PlanStep(args={'primitive_type': 'cube', 'name': 'Boy_Arm_R_Upper', 'location': [0.35, 0, 1.35], 'scale': [0.08, 0.08, 0.25]}, depends_on=[], agent_id='CREATE PRIMITIVE', mcp_tool_id='create_primitive', to_be_completed_in_this="Create boy's right upper arm using a cube primitive", completed_in_this_step=None), PlanStep(args={'primitive_type': 'cube', 'name': 'Boy_Arm_L_Lower',
+ 'location': [-0.35, 0, 0.95], 'scale': [0.07, 0.07, 0.2]}, depends_on=[],
+  agent_id='CREATE PRIMITIVE', mcp_tool_id='create_primitive', 
+  to_be_completed_in_this="Create boy's left lower arm using a cube primitive",
+   completed_in_this_step=None),
+    PlanStep(args={'primitive_type': 'cube', 'name': 'Boy_Arm_R_Lower', 
+    'location': [0.35, 0, 0.95], 'scale': [0.07, 0.07, 0.2]}, depends_on=[], 
+    agent_id='CREATE PRIMITIVE', mcp_tool_id='create_primitive', to_be_completed_in_this="Create boy's right lower arm using a cube primitive", completed_in_this_step=None), PlanStep(args={'primitive_type': 'cube', 'name': 'Boy_Leg_L_Upper', 'location': [-0.15, 0.05, 0.8], 'scale': [0.12, 0.12, 0.3]}, depends_on=[], agent_id='CREATE PRIMITIVE', mcp_tool_id='create_primitive', to_be_completed_in_this="Create boy's left upper leg using a cube primitive", completed_in_this_step=None), PlanStep(args={'primitive_type': 'cube', 'name': 'Boy_Leg_R_Upper', 'location': [0.15, 0.05, 0.8], 'scale': [0.12, 0.12, 0.3]}, depends_on=[], agent_id='CREATE PRIMITIVE', mcp_tool_id='create_primitive', to_be_completed_in_this="Create boy's right upper leg using a cube primitive", completed_in_this_step=None), PlanStep(args={'primitive_type': 'cube', 'name': 'Boy_Leg_L_Lower', 'location': [-0.15, 0.1, 0.35], 'scale': [0.1, 0.1, 0.25]}, depends_on=[], agent_id='CREATE PRIMITIVE', mcp_tool_id='create_primitive', to_be_completed_in_this="Create boy's left lower leg using a cube primitive", completed_in_this_step=None), PlanStep(args={'primitive_type': 'cube', 'name': 'Boy_Leg_R_Lower', 'location': [0.15, 0.1, 0.35], 'scale': [0.1, 0.1, 0.25]}, depends_on=[], agent_id='CREATE PRIMITIVE', mcp_tool_id='create_primitive', to_be_completed_in_this="Create boy's right lower leg using a cube primitive", completed_in_this_step=None)]
+
+
+
+
+// execution logic is remaining
+// depends on logic
+// push into executed
+
+
+{'agent_id': 'create_primitive_0', 'plan': Plan(steps=[PlanStep(args={}, 
+depends_on=[], agent_id='inspect_scene', mcp_tool_id='inspect_scene', 
+to_be_completed_in_this='Inspect the current Blender scene to understand what 
+objects already exist and their properties', completed_in_this_step=None), 
+PlanStep(args={'primitive_type': 'cube', 'name': 'Chair_Seat', 
+'location': [0, 0, 0.5], 'scale': [0.6, 0.6, 0.1]}, 
+depends_on=['inspect_scene'], agent_id='create_primitive', 
+mcp_tool_id='create_primitive', to_be_completed_in_this='Create a chair - start with a cube for the seat',
+ completed_in_this_step=None), 
+ PlanStep(args={'primitive_type': 'cube', 'name': 'Chair_Back', 
+ 'location': [0, -0.35, 1.2], 'scale': [0.6, 0.1, 0.7]}, 
+ depends_on=['inspect_scene'], agent_id='create_primitive', 
+ mcp_tool_id='create_primitive', to_be_completed_in_this='Create chair back support - cube positioned vertically behind the seat', 
+ completed_in_this_step=None), PlanStep(args={'primitive_type': 
+ 'cube', 'name': 'Chair_Leg_FL', 'location': [-0.25, 0.25, 0.25], 'scale': [0.08, 0.08, 0.25]},
+  depends_on=['inspect_scene'], agent_id='create_primitive', mcp_tool_id='create_primitive', to_be_completed_in_this='Create chair front left leg', completed_in_this_step=None), PlanStep(args={'primitive_type': 'cube', 'name': 'Chair_Leg_FR', 'location': [0.25, 0.25, 0.25], 'scale': [0.08, 0.08, 0.25]}, depends_on=['inspect_scene'], agent_id='create_primitive', mcp_tool_id='create_primitive', to_be_completed_in_this='Create chair front right leg', completed_in_this_step=None), PlanStep(args={'primitive_type': 'cube', 'name': 'Chair_Leg_BL', 'location': [-0.25, -0.25, 0.25], 'scale': [0.08, 0.08, 0.25]}, depends_on=['inspect_scene'], agent_id='create_primitive', mcp_tool_id='create_primitive', to_be_completed_in_this='Create chair back left leg', completed_in_this_step=None), PlanStep(args={'primitive_type': 'cube', 'name': 'Chair_Leg_BR', 'location': [0.25, -0.25, 0.25], 'scale': [0.08, 0.08, 0.25]}, depends_on=['inspect_scene'], agent_id='create_primitive', mcp_tool_id='create_primitive', to_be_completed_in_this='Create chair back right leg', completed_in_this_step=None), PlanStep(args={'primitive_type': 'sphere', 'name': 'Boy_Head', 'location': [0, 0, 1.8], 'scale': [0.2, 0.2, 0.22]}, depends_on=['inspect_scene'], agent_id='create_primitive', mcp_tool_id='create_primitive', to_be_completed_in_this="Create boy's head - sphere", completed_in_this_step=None), PlanStep(args={'primitive_type': 'cube', 'name': 'Boy_Torso', 'location': [0, 0, 1.35], 'scale': [0.25, 0.15, 0.35]}, depends_on=['inspect_scene'], agent_id='create_primitive', mcp_tool_id='create_primitive', to_be_completed_in_this="Create boy's torso - cube", completed_in_this_step=None), PlanStep(args={'primitive_type': 'cylinder', 'name': 'Boy_Arm_L', 'location': [-0.4, 0, 1.35], 'rotation': [1.57, 0, 0], 'scale': [0.06, 0.25, 0.06]}, depends_on=['inspect_scene'], agent_id='create_primitive', mcp_tool_id='create_primitive', to_be_completed_in_this="Create boy's left arm", completed_in_this_step=None), PlanStep(args={'primitive_type': 'cylinder', 'name': 'Boy_Arm_R', 'location': [0.4, 0, 1.35], 'rotation': [1.57, 0, 0], 'scale': [0.06, 0.25, 0.06]}, depends_on=['inspect_scene'], agent_id='create_primitive', mcp_tool_id='create_primitive', to_be_completed_in_this="Create boy's right arm", completed_in_this_step=None), PlanStep(args={'primitive_type': 'cylinder', 'name': 'Boy_Leg_L', 'location': [-0.15, 0, 0.85], 'rotation': [1.57, 0, 0], 'scale': [0.07, 0.25, 0.07]}, depends_on=['inspect_scene'], agent_id='create_primitive', mcp_tool_id='create_primitive', to_be_completed_in_this="Create boy's left leg", completed_in_this_step=None), PlanStep(args={'primitive_type': 'cylinder', 'name': 'Boy_Leg_R', 'location': [0.15, 0, 0.85], 'rotation': [1.57, 0, 0], 'scale': [0.07, 0.25, 0.07]}, depends_on=['inspect_scene'], agent_id='create_primitive', mcp_tool_id='create_primitive', to_be_completed_in_this="Create boy's right leg", completed_in_this_step=None), PlanStep(args={'object_id': 'Chair_Seat', 'material_name': 'Wood', 'base_color': [0.6, 0.4, 0.2], 'roughness': 0.6}, depends_on=['create_primitive'], agent_id='assign_material', mcp_tool_id='assign_material', to_be_completed_in_this='Assign wood material to the chair seat', completed_in_this_step=None), PlanStep(args={'object_id': 'Chair_Back', 'material_name': 'Wood', 'base_color': [0.6, 0.4, 0.2], 'roughness': 0.6}, depends_on=['create_primitive'], agent_id='assign_material', mcp_tool_id='assign_material', to_be_completed_in_this='Assign wood material to the chair back', completed_in_this_step=None), PlanStep(args={'object_id': 'Chair_Leg_FL', 'material_name': 'Wood', 'base_color': [0.6, 0.4, 0.2], 'roughness': 0.6}, depends_on=['create_primitive'], agent_id='assign_material', mcp_tool_id='assign_material', to_be_completed_in_this='Assign wood material to the chair legs', completed_in_this_step=None), PlanStep(args={'object_id': 'Boy_Head', 'material_name': 'Skin', 'base_color': [1.0, 0.8, 0.7], 'roughness': 0.5}, depends_on=['create_primitive'], agent_id='assign_material', mcp_tool_id='assign_material', to_be_completed_in_this="Assign skin color to the boy's head", completed_in_this_step=None), PlanStep(args={'object_id': 'Boy_Arm_L', 'material_name': 'Skin', 'base_color': [1.0, 0.8, 0.7], 'roughness': 0.5}, depends_on=['create_primitive'], agent_id='assign_material', mcp_tool_id='assign_material', to_be_completed_in_this="Assign skin color to boy's arms and legs", completed_in_this_step=None), PlanStep(args={'object_id': 'Boy_Torso', 'material_name': 'Shirt', 'base_color': [0.2, 0.4, 0.8], 'roughness': 0.7}, depends_on=['create_primitive'], agent_id='assign_material', mcp_tool_id='assign_material', to_be_completed_in_this="Assign shirt color to the boy's torso", completed_in_this_step=None), PlanStep(args={'child_id': 'Boy_Head', 'parent_id': 'Boy_Torso'}, depends_on=['create_primitive'], agent_id='parent_object', mcp_tool_id='parent_object', to_be_completed_in_this='Create hierarchical structure for the boy with head as child of torso', completed_in_this_step=None), PlanStep(args={'child_id': 'Boy_Arm_L', 'parent_id': 'Boy_Torso'}, depends_on=['create_primitive'], agent_id='parent_object', mcp_tool_id='parent_object', to_be_completed_in_this="Parent left arm to boy's torso", completed_in_this_step=None), PlanStep(args={'child_id': 'Boy_Arm_R', 'parent_id': 'Boy_Torso'}, depends_on=['create_primitive'], agent_id='parent_object', mcp_tool_id='parent_object', to_be_completed_in_this="Parent right arm to boy's torso", completed_in_this_step=None), PlanStep(args={'child_id': 'Boy_Leg_L', 'parent_id': 'Boy_Torso'}, depends_on=['create_primitive'], agent_id='parent_object', mcp_tool_id='parent_object', to_be_completed_in_this="Parent left leg to boy's torso", completed_in_this_step=None), PlanStep(args={'child_id': 'Boy_Leg_R', 'parent_id': 'Boy_Torso'}, depends_on=['create_primitive'], agent_id='parent_object', mcp_tool_id='parent_object', to_be_completed_in_this="Parent right leg to boy's torso", completed_in_this_step=None)])}
+Traceback (most recent call last):
